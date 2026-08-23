@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+
+# Cache files and directories
+.cache/
+cache/
+*.cache
+*.tmp
+*.temp
+
+# Tool caches
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+coverage/

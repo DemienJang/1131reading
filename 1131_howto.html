@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>하나님 중심 말씀 묵상 가이드 & 실습 | 보배마을 중등부</title>
+  <meta name="description" content="보배마을 중등부 제자훈련 묵상반 — 말씀 묵상의 이해, 5가지 유익, 묵상 준비, 하나님 중심 말씀 묵상 가이드 및 창세기 1장 실습 교재입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="보배마을 중등부">
+  <meta property="og:title" content="하나님 중심 말씀 묵상 가이드 & 실습">
+  <meta property="og:description" content="성경의 주인공이신 하나님을 발견하고 삶으로 살아내기">
+  <meta property="og:image" content="https://postfiles.pstatic.net/MjAyNjA4MjNfMjYy/MDAxNzg3NDYwMjEwMDY0.iWy4HEmHglCtOIosP94ngHfCEt49s9kmXmF6q_krBpQg.8BRgz9lY_1rs77UtDHJG40pyquY2xIgr5qzevrxyI_wg.PNG/career-readingtext_(2).png?type=w966">
+  <link rel="icon" href="https://emojipack.netlify.app/emoji/emoji32_prayerful.png">
+  <style>
+    :root{--g950:#0b1d05;--g900:#0f2106;--g800:#1a3a0b;--g700:#275317;--g600:#347020;--g100:#e8f5de;--gold:#c8960a;--gold-lt:#f0c040;--ink:#1c2e12;--muted:#4c6039;--surface:#f2f9ec;--card:#fff;--border:#cce4b8;--r:18px;--shadow:0 5px 18px rgba(39,83,23,.10)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:74px}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Pretendard",sans-serif;background:var(--surface);color:var(--ink);font-size:15px;line-height:1.75;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
+    img{display:block} button,input,textarea{font:inherit} button,a{-webkit-tap-highlight-color:transparent}
+    :focus-visible{outline:3px solid var(--gold-lt);outline-offset:3px}
+    
+    /* Sub Section TOC (Sticky) */
+    .toc{position:sticky;top:0;z-index:100;background:var(--g800);overflow-x:auto;scrollbar-width:none}
+    .toc::-webkit-scrollbar{display:none}.toc-inner{display:flex;min-width:max-content;justify-content:center}
+    .toc-a{min-width:75px;padding:8px 11px 6px;color:rgba(255,255,255,.68);text-decoration:none;text-align:center;font-size:11px;font-weight:850;line-height:1.25;border-bottom:3px solid transparent;white-space:nowrap}
+    .toc-a img{width:19px;height:19px;object-fit:contain;margin:0 auto 2px}.toc-a.on,.toc-a:hover{color:var(--gold-lt);border-color:var(--gold-lt);background:rgba(255,255,255,.05)}
+
+    .hero{max-width:100%;position:relative;overflow:hidden;padding:24px 18px 28px;color:#fff;background:linear-gradient(150deg,var(--g950),var(--g800) 52%,var(--g700))}
+    .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none}.hero::before{width:220px;height:220px;right:-75px;bottom:-95px;background:radial-gradient(circle,rgba(240,192,64,.24),transparent 67%)}.hero::after{width:95px;height:95px;left:-35px;top:70px;border:1px solid rgba(255,255,255,.1)}
+    .hero-inner{max-width:560px;margin:auto;position:relative;z-index:1}.hero-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.hero-logo{height:26px}.hero-emblem{height:58px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+    .step-badge{display:inline-block;padding:3px 9px;border-radius:6px;background:var(--gold);color:#fff;font-size:11px;font-weight:900;margin-bottom:8px}
+    .eyebrow{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--gold-lt);margin-bottom:4px}.hero h1{font-size:clamp(26px,8.5vw,42px);line-height:1.15;letter-spacing:-.045em;margin-bottom:8px}.subtitle{font-size:14px;font-weight:750;color:rgba(255,255,255,.88);margin-bottom:15px}
+    .tag-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}.tag{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800;line-height:1.35}
+    .profile-note{display:grid;grid-template-columns:38px 1fr;gap:11px;align-items:start;padding:12px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:13px;line-height:1.65;color:rgba(255,255,255,.88)}
+    .profile-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold-lt);color:var(--g900);font-size:18px;font-weight:900}
+
+    /* Views Switch */
+    .view-panel{display:none}.view-panel.active{display:block}
+
+    .wrap{max-width:560px;margin:0 auto;padding:0 14px 70px}.card{scroll-margin-top:74px;margin-top:15px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+    .card-head{display:flex;align-items:center;gap:10px;padding:14px 16px 12px;background:var(--g100);border-bottom:1px solid var(--border)}.card-head img{width:36px;height:36px;object-fit:contain}.card-head h2{color:var(--g800);font-size:16px;line-height:1.3;letter-spacing:-.025em}.num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;margin-right:4px;background:var(--g700);color:#fff;font-size:11px;font-weight:900}.card-body{padding:16px}
+    .intro{color:#3a4d29;font-size:13.5px;line-height:1.72;margin-bottom:14px}.intro:last-child{margin-bottom:0}
+    .notice{padding:13px 15px;margin-bottom:15px;border:1px solid #efd36e;border-left:4px solid var(--gold);border-radius:13px;background:#fffde9}.notice h3{font-size:13.8px;color:#715400;margin-bottom:5px}.notice p{font-size:12.8px;color:#594b22;line-height:1.65}
+    
+    /* Guide Blocks */
+    .guide-box{padding:14px;border:1px solid var(--border);border-radius:14px;background:#fbfef9;margin-bottom:12px}
+    .guide-box:last-child{margin-bottom:0}
+    .guide-box h3{font-size:14.5px;color:var(--g800);line-height:1.45;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .guide-box h4{font-size:13.5px;color:var(--g700);margin:12px 0 4px;font-weight:900}
+    .guide-box p{font-size:13.3px;color:#3b4f2b;line-height:1.72;margin-bottom:8px}
+    .guide-box p:last-child{margin-bottom:0}
+    .guide-box ul,.guide-box ol{padding-left:18px;margin-top:6px}
+    .guide-box li{font-size:13px;color:#2c3e1e;line-height:1.7;margin-bottom:6px}
+    .guide-box li:last-child{margin-bottom:0}
+    .badge-sub{display:inline-block;padding:2px 7px;border-radius:5px;background:var(--g100);color:var(--g700);font-size:11px;font-weight:850;margin-right:4px}
+    
+    /* Benefit Collapsible Toggle */
+    details.benefit-toggle{border:1px solid #d7e9c8;border-radius:13px;background:#fff;margin-bottom:9px;overflow:hidden;box-shadow:0 2px 6px rgba(39,83,23,.04)}
+    details.benefit-toggle:last-child{margin-bottom:0}
+    details.benefit-toggle summary{cursor:pointer;list-style:none;padding:12px 38px 12px 14px;position:relative;color:var(--g800);font-weight:850;font-size:13.8px;line-height:1.45;display:flex;align-items:center;gap:8px;background:#fbfef9}
+    details.benefit-toggle summary::-webkit-details-marker{display:none}
+    details.benefit-toggle summary::after{content:"＋";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:16px;font-weight:900}
+    details[open].benefit-toggle summary::after{content:"−"}
+    details[open].benefit-toggle summary{border-bottom:1px solid #e3edd9;background:#f4f9ef}
+    .b-num{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--g700);color:#fff;font-size:11px;font-weight:900;flex:none}
+    .benefit-body{padding:13px 14px;background:#fff}
+    .benefit-body p{font-size:13.2px;color:#3b4f2b;line-height:1.72;margin-bottom:8px}
+    .benefit-body p:last-child{margin-bottom:0}
+    .tip-box{margin-top:8px;padding:9px 12px;background:#f9fcfa;border-left:3px solid var(--gold);border-radius:6px;font-size:12.6px;color:#4c5b3c;line-height:1.68}
+    .tip-box b{color:#785400}
+    
+    .scripture-quote{margin:4px 0 8px;padding:8px 12px;background:#f2f9eb;border-left:3px solid var(--g600);border-radius:6px;font-size:12.8px;color:#204014;line-height:1.68}
+    .scripture-quote b{color:var(--g800);display:block;margin-bottom:2px;font-size:11.8px}
+
+    /* Steps within Card 3 */
+    .step-item-box{padding:13px 14px;border:1px solid #d7e9c8;border-radius:13px;background:#fff;margin-top:10px}
+    .step-item-box h4{font-size:14px;color:var(--g800);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+    .step-item-box p{font-size:13.2px;color:#3b4f2b;line-height:1.7;margin-bottom:6px}
+    .step-item-box p:last-child{margin-bottom:0}
+    
+    /* Scripture Details */
+    details.scripture{border:1px solid var(--border);border-radius:14px;background:#fbfef9;margin-bottom:10px;overflow:hidden}details.scripture summary{cursor:pointer;list-style:none;padding:13px 42px 13px 14px;position:relative;color:var(--g800);font-weight:900;font-size:14px;line-height:1.45}details.scripture summary::-webkit-details-marker{display:none}details.scripture summary::after{content:"＋";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:19px;font-weight:900}details[open].scripture summary::after{content:"−"}.range{display:block;color:var(--muted);font-size:11px;font-weight:700;margin-top:2px}.verses{padding:4px 15px 16px;border-top:1px solid var(--border)}.verse{font-size:14.5px;line-height:1.82;margin-top:12px;color:#2c3e1e;word-break:keep-all}.vnum{display:inline-grid;place-items:center;min-width:23px;height:21px;margin-right:5px;padding:0 5px;border-radius:7px;background:var(--g100);color:var(--g700);font-size:11px;font-weight:900;vertical-align:2px}
+
+    /* Reflection & Practice Form */
+    .reflection{margin-top:13px;padding:14px;border:1px solid var(--border);border-radius:14px;background:#fbfef9}.reflection h3{font-size:14.5px;color:var(--g800);line-height:1.5;margin-bottom:5px}.q-guide{font-size:12.5px;color:#5a7346;line-height:1.6;margin-bottom:8px}textarea{display:block;width:100%;min-height:95px;resize:vertical;padding:11px 12px;border:1px solid #b9d69f;border-radius:11px;background:#fff;color:var(--ink);font-size:13.8px;line-height:1.68}textarea:focus{border-color:var(--g600);outline:3px solid rgba(52,112,32,.15)}.save-status{min-height:18px;margin-top:4px;color:#668050;font-size:11px}
+
+    /* Option B: Example Details Box */
+    details.example-box{margin:8px 0 10px;background:#f4f9ef;border:1px dashed #b2d897;border-radius:10px;overflow:hidden}
+    details.example-box summary{padding:8px 12px;font-size:12px;font-weight:850;color:var(--g700);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;background:#eef7e9}
+    details.example-box summary::-webkit-details-marker{display:none}
+    details.example-box summary::after{content:"예시 보기 ▾";color:var(--gold);font-size:11px;font-weight:900}
+    details[open].example-box summary::after{content:"예시 닫기 ▴"}
+    .example-content{padding:10px 13px;font-size:12.8px;color:#354d24;line-height:1.68;border-top:1px dashed #cce4b8;background:#fff}
+    .example-content ul{padding-left:17px;margin:0}
+    .example-content li{margin-bottom:4px}
+    .example-content li:last-child{margin-bottom:0}
+
+    /* Discussion Question Cards */
+    .discussion-card{padding:14px 15px;margin-bottom:12px;border:1px solid #d7e9c8;border-radius:13px;background:#fff;border-left:4px solid var(--g700)}
+    .discussion-card:last-child{margin-bottom:0}
+    .discussion-badge{display:inline-block;padding:2px 7px;border-radius:5px;background:var(--g100);color:var(--g700);font-size:11px;font-weight:850;margin-bottom:5px}
+    .discussion-card h3{font-size:14px;color:var(--g800);line-height:1.55;font-weight:800}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:48px;border:0;border-radius:12px;padding:10px 14px;font-size:14px;font-weight:850;cursor:pointer;transition:transform .1s,filter .15s;text-decoration:none}
+    .btn:hover{filter:brightness(.97)}.btn:active{transform:scale(.99)}
+    .btn-primary{width:100%;background:linear-gradient(145deg,var(--g700),var(--g800));color:#fff;box-shadow:0 4px 14px rgba(26,58,11,.25);margin-top:20px;font-size:15px}
+    .btn-outline{width:100%;background:#fff;border:1.5px solid var(--border);color:var(--g800);margin-top:16px;font-size:14.5px}
+
+    .footer{text-align:center;padding:26px 16px;color:var(--muted);font-size:12px;line-height:1.6}.footer img{height:30px;margin:10px auto 0}
+    
+    /* Floating Action Buttons */
+    .fab{position:fixed;right:15px;bottom:17px;z-index:90;width:44px;height:44px;border:0;border-radius:50%;background:var(--g700);color:#fff;font-size:19px;box-shadow:0 5px 16px rgba(15,33,6,.35);opacity:0;pointer-events:none;transition:opacity .2s;cursor:pointer}.fab.show{opacity:1;pointer-events:auto}
+    .fab-step1{position:fixed;right:15px;bottom:68px;z-index:95;width:48px;height:48px;border:0;border-radius:50%;background:var(--gold);color:#fff;font-size:12px;font-weight:900;box-shadow:0 4px 14px rgba(200,150,10,.45);display:none;align-items:center;justify-content:center;cursor:pointer;line-height:1.1;text-align:center;padding:4px}
+    .fab-step1:hover{filter:brightness(.95)}
+    
+    @media(min-width:768px){body{font-size:16px}.wrap{max-width:620px}.hero-inner{max-width:620px}.card-body{padding:20px}.toc-a{min-width:90px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+
+  <!-- 1단계 전용 목차 (개요, 3대 핵심 질문 삭제 반영) -->
+  <nav class="toc" id="toc-step1" aria-label="1단계 목차"><div class="toc-inner">
+    <a class="toc-a on" href="#meditation-intro"><img src="https://emojipack.netlify.app/emoji/emoji26_focused.png" alt=""><span>묵상의 이해</span></a>
+    <a class="toc-a" href="#meditation-prep"><img src="https://emojipack.netlify.app/emoji/emoji32_prayerful.png" alt=""><span>묵상 준비</span></a>
+    <a class="toc-a" href="#god-centered"><img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt=""><span>하나님 중심</span></a>
+    <a class="toc-a" href="#apply-questions"><img src="https://emojipack.netlify.app/emoji/emoji27_welcoming.png" alt=""><span>삶으로 연결</span></a>
+  </div></nav>
+
+  <!-- 2단계 전용 목차 (개요, 돌아보기 삭제) -->
+  <nav class="toc" id="toc-step2" style="display:none" aria-label="2단계 목차"><div class="toc-inner">
+    <a class="toc-a on" href="#word2"><img src="https://emojipack.netlify.app/emoji/emoji26_focused.png" alt=""><span>오늘의 말씀</span></a>
+    <a class="toc-a" href="#self-reading"><img src="https://emojipack.netlify.app/emoji/emoji32_prayerful.png" alt=""><span>스스로 묵상</span></a>
+    <a class="toc-a" href="#self-apply"><img src="https://emojipack.netlify.app/emoji/emoji27_welcoming.png" alt=""><span>삶으로 연결</span></a>
+    <a class="toc-a" href="#discussion"><img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt=""><span>질문과 나눔</span></a>
+  </div></nav>
+
+  <!-- ======================== [VIEW 1: 1단계 묵상 방법 안내] ======================== -->
+  <div class="view-panel active" id="view-step1">
+    <header class="hero" id="tag1">
+      <div class="hero-inner">
+        <div class="hero-top">
+          <span class="step-badge">1단계: 말씀 묵상 가이드</span>
+          <img class="hero-emblem" src="https://emojipack.netlify.app/emoji/logo_youth1.png" alt="보배마을 중등부">
+        </div>
+        <p class="eyebrow">제자훈련 묵상반 · 1131 하나님 중심 말씀 읽기</p>
+        <h1>하나님 중심 말씀 묵상</h1>
+        <p class="subtitle">성경의 주인공이신 하나님을 발견하고 삶으로 살아내기</p>
+        <div class="tag-row" aria-label="오늘의 대표 태그">
+          <span class="tag">#말씀묵상의이해</span>
+          <span class="tag">#묵상의5가지유익</span>
+          <span class="tag">#하나님중심묵상</span>
+          <span class="tag">#관찰해석발견</span>
+          <span class="tag">#지식믿음행동</span>
+        </div>
+        <div class="profile-note"><span class="profile-mark" aria-hidden="true">📖</span><p><b>성경의 주인공은 하나님입니다.</b><br>오늘 말씀 속에서 하나님이 어떤 분이신지 발견하고, 그 사랑을 우리의 삶과 관계 속에서 살아내 봅시다.</p></div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- 1단계 카드 1: 말씀 묵상의 이해 & 5가지 유익 (토글 적용) -->
+      <article class="card" id="meditation-intro">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji26_focused.png" alt=""><h2><span class="num">1</span> 말씀 묵상의 이해</h2></div>
+        <div class="card-body">
+          <div class="guide-box">
+            <h3>🌱 말씀 묵상이란 무엇인가?</h3>
+            <ul>
+              <li>묵상은 단순히 성경의 글자를 눈으로 읽어 내려가는 지식 습득이 아닙니다. 하나님의 말씀을 깊이 생각하고, 그 안에 담긴 <b>하나님의 뜻과 언약을 발견하여 내 삶에 적용하는 영적 호흡</b>입니다.</li>
+              <li>성경에서 '묵상하다'는 본래 <b>'작은 소리로 읊조리다'</b>라는 의미입니다. 소가 여물을 되새김질하듯 말씀을 곱씹고 질문할 때 비로소 영혼을 자라게 하는 양식이 됩니다. 즉, 묵상은 <b>말씀을 마음에 새기는 적극적인 행위</b>입니다.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px;">
+            <p class="intro" style="margin-bottom:8px;"><b>✨ 말씀을 묵상하면 왜 좋은가? (5가지 유익)</b><br>각 항목을 누르면 말씀과 자세한 설명을 볼 수 있습니다.</p>
+            
+            <!-- 유익 1 -->
+            <details class="benefit-toggle" open>
+              <summary><span class="b-num">1</span> 나를 온전하게 세우고 선한 능력을 갖추게 한다</summary>
+              <div class="benefit-body">
+                <div class="scripture-quote">
+                  <b>디모데후서 3장 16~17절</b>
+                  "모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니 이는 하나님의 사람으로 온전하게 하며 모든 선한 일을 행할 능력을 갖추게 하려 함이라"
+                </div>
+                <p>성경은 사람의 생각이 아닌 <b>하나님의 감동</b>으로 기록되었습니다. 말씀 안에는 우리를 바른길로 이끄는 <b>교훈과 책망</b>이 담겨 있어, 영적으로 성숙해지고 세상에서 선한 일을 행할 <b>분별력과 영적 능력</b>을 갖추게 합니다.</p>
+                <div class="tip-box">
+                  <b>💡 청소년 묵상 포인트</b><br>
+                  학업의 부담과 친구 관계의 고민 속에서 올바른 선택을 하려면, <b>하나님의 말씀이라는 명확한 기준</b>이 내 안에 세워져 있어야 합니다.
+                </div>
+              </div>
+            </details>
+
+            <!-- 유익 2 -->
+            <details class="benefit-toggle">
+              <summary><span class="b-num">2</span> 나의 길을 평탄하고 형통하게 인도한다</summary>
+              <div class="benefit-body">
+                <div class="scripture-quote">
+                  <b>여호수아 1장 8절</b>
+                  "이 율법책을 네 입에서 떠나지 말게 하며 주야로 그것을 묵상하여 그 안에 기록된 대로 다 지켜 행하라 그리하면 네 길이 평탄하게 될 것이며 네가 형통하리라"
+                </div>
+                <div class="scripture-quote">
+                  <b>시편 119편 105절</b>
+                  "주의 말씀은 내 발에 등이요 내 길에 빛이니이다"
+                </div>
+                <p>세상의 유행이나 내 지혜가 아닌, <b>하나님의 말씀을 인생의 기준</b>으로 삼을 때 하나님께서 우리의 걸음을 가장 선한 길로 인도하십니다.</p>
+                <div class="tip-box">
+                  <b>💡 손전등 비유</b><br>
+                  성경이 말하는 <b>'형통'</b>은 문제가 전혀 없다는 뜻이 아닙니다. <b>내 발에 등불이 되시는 하나님의 말씀</b>이 있기에, 캄캄한 현실 속에서도 넘어지지 않고 올바른 길을 찾아가는 능력입니다.
+                </div>
+              </div>
+            </details>
+
+            <!-- 유익 3 -->
+            <details class="benefit-toggle">
+              <summary><span class="b-num">3</span> 영적인 생명을 공급받고 참된 자유를 누리게 한다</summary>
+              <div class="benefit-body">
+                <div class="scripture-quote">
+                  <b>신명기 8장 3절</b>
+                  "...사람이 떡으로만 사는 것이 아니요 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네게 알게 하려 하심이니라"
+                </div>
+                <div class="scripture-quote">
+                  <b>요한복음 8장 32절</b>
+                  "진리를 알지니 진리가 너희를 자유롭게 하리라"
+                </div>
+                <p>사람은 밥만으로 살 수 없습니다. <b>창조주 하나님의 입에서 나오는 진리의 말씀</b>이 공급되어야 <b>참된 생명력</b>을 누립니다.</p>
+                <div class="tip-box">
+                  <b>💡 배터리 비유</b><br>
+                  배터리가 방전되면 스마트폰이 꺼지듯, 영혼의 갈급함과 공허함은 오직 <b>진리의 말씀</b>으로만 채워집니다. 말씀의 진리 안에 거할 때 <b>세상의 시선과 비교로부터 참된 자유</b>를 얻습니다.
+                </div>
+              </div>
+            </details>
+
+            <!-- 유익 4 -->
+            <details class="benefit-toggle">
+              <summary><span class="b-num">4</span> 행실을 깨끗하게 하고 영적 싸움에서 승리하게 한다</summary>
+              <div class="benefit-body">
+                <div class="scripture-quote">
+                  <b>시편 119편 9절</b>
+                  "청년이 무엇으로 그의 행실을 깨끗하게 하리이까 주의 말씀을 따라 삼갈 것이니이다"
+                </div>
+                <div class="scripture-quote">
+                  <b>에베소서 6장 17절</b>
+                  "구원의 투구와 성령의 검 곧 하나님의 말씀을 가지라"
+                </div>
+                <p>매일 마주하는 수많은 유혹과 거짓된 정보 속에서, 하나님의 말씀은 나를 정결하게 지키는 <b>기준</b>이자 악한 생각을 물리치는 <b>성령의 검</b>입니다.</p>
+                <div class="tip-box">
+                  <b>💡 무기 비유</b><br>
+                  무기 없이 전쟁터에 갈 수 없듯, 영적 싸움에서도 말씀이라는 강력한 무기로 무장할 때 유혹을 이겨낼 수 있습니다.
+                </div>
+              </div>
+            </details>
+
+            <!-- 유익 5 -->
+            <details class="benefit-toggle">
+              <summary><span class="b-num">5</span> 예수 그리스도를 아는 지식에서 자라게 한다</summary>
+              <div class="benefit-body">
+                <div class="scripture-quote">
+                  <b>베드로후서 3장 18절</b>
+                  "오직 우리 주 곧 구주 예수 그리스도의 은혜와 그를 아는 지식에서 자라 가라 영광이 이제와 영원한 날까지 그에게 있을지어다"
+                </div>
+                <div class="scripture-quote">
+                  <b>요한복음 17장 3절</b>
+                  "영생은 곧 유일하신 참 하나님과 그가 보내신 자 예수 그리스도를 아는 것이니이다"
+                </div>
+                <p>말씀 묵상의 최종 목적은 단순한 지식의 축적이 아니라, 구원자이신 <b>예수 그리스도와의 '인격적인 관계의 깊어짐'</b>입니다.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1단계 카드 2: 말씀 묵상을 위한 준비 -->
+      <article class="card" id="meditation-prep">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji32_prayerful.png" alt=""><h2><span class="num">2</span> 말씀 묵상을 위한 준비 (읽기 전)</h2></div>
+        <div class="card-body">
+          <div class="guide-box">
+            <p>말씀 묵상은 즉흥적인 감정이 아니라, <b>질서 있는 훈련</b>입니다. 묵상을 시작하기 전에는 반드시 마음의 밭을 기경하는 준비 단계가 필요합니다.</p>
+            
+            <div style="margin-top:10px;">
+              <h4>① 환경 : 시공간을 구별하여 집중하기</h4>
+              <p>조용한 시간과 장소를 정하고 스마트폰 등 방해 요소를 차단합니다. 시끄러운 곳에서는 작은 소리를 들을 수 없듯, <b>집중할 수 있는 환경</b>이 마련되어야 <b>세미한 하나님의 음성</b>을 들을 수 있습니다.</p>
+
+              <h4>② 찬양 : 마음의 문을 부드럽게 열기</h4>
+              <p>묵상 전, 하나님을 높이는 찬양을 부르며 세상 염려로 <b>굳어있는 마음을 부드럽게</b> 엽니다.</p>
+
+              <h4>③ 기도 : 성령님의 조명하심 구하기</h4>
+              <p>내 지혜가 아니라 성령님께서 말씀을 밝히 깨닫게 해 주시도록 기도합니다.<br>
+              <span style="color:var(--g700);font-weight:850;">"주님, 오늘 이 말씀을 통해 제게 주시는 하나님의 음성을 듣게 하옵소서."</span></p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1단계 카드 3: 하나님 중심 묵상 (3대 핵심 질문 통합) -->
+      <article class="card" id="god-centered">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt=""><h2><span class="num">3</span> 하나님 중심 묵상</h2></div>
+        <div class="card-body">
+          <div class="guide-box">
+            <p>성경의 원저자이자 모든 이야기의 주체는 <b>하나님</b>입니다. 따라서 본문을 읽을 때 '내가 무엇을 해야 하는가?'보다 <b>'하나님은 어떤 분이신가?'</b>를 먼저 묻는 것이 올바른 성경 읽기의 출발점입니다.</p>
+            <p>하나님의 성품과 일하심을 깊이 발견하기 위해, 다음 <b>3가지 핵심 질문</b>을 던지며 말씀을 관찰합니다.</p>
+          </div>
+
+          <!-- 질문 1: 관찰 -->
+          <div class="step-item-box">
+            <h4><span class="badge-sub">1단계</span> 하나님이 뭘 하시거나 말씀하셨지? (관찰)</h4>
+            <p>본문에서 <b>하나님이 주어</b>가 되는 문장을 찾아, 하나님의 구체적인 <b>행동과 말씀</b>을 객관적으로 관찰합니다.</p>
+            <p>💡 사건의 결과나 사람의 반응보다 <b>하나님의 행동 자체에 주목</b>해야 자의적 해석을 방지하고 성경의 본뜻을 정확하게 파악할 수 있습니다.</p>
+          </div>
+
+          <!-- 질문 2: 해석 -->
+          <div class="step-item-box">
+            <h4><span class="badge-sub">2단계</span> 하나님은 왜 그렇게 하시거나 말씀하셨을까? (해석)</h4>
+            <p>하나님의 행동과 말씀에 담긴 <b>의도와 목적, 구원의 이유</b>를 문맥 속에서 깊이 생각합니다.</p>
+            <p>💡 행동의 동기를 묵상할 때 <b>하나님의 성품과 일하심의 원리</b>를 알게 됩니다. 징계와 책망의 말씀 이면에 있는 <b>공의와 사랑, 회복의 마음</b>을 발견하게 됩니다.</p>
+          </div>
+
+          <!-- 질문 3: 발견과 적용 -->
+          <div class="step-item-box">
+            <h4><span class="badge-sub">3단계</span> 와! 이 구절을 통해 보니 하나님은 어떤 분이시네? (발견과 적용)</h4>
+            <p>앞선 관찰과 해석을 종합하여, 본문이 계시하는 하나님의 속성(성품, 능력, 계획 등)을 <b>명확한 한 문장의 고백</b>으로 정리합니다.</p>
+            <p>💡 단순한 지식을 넘어 내 언어로 하나님의 성품을 정의할 때, 말씀은 <b>하나님을 인격적으로 알아가는 은혜</b>가 됩니다.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 1단계 카드 4: 묵상을 삶으로 연결하는 3가지 핵심 질문 -->
+      <article class="card" id="apply-questions">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji27_welcoming.png" alt=""><h2><span class="num">4</span> 묵상을 삶으로 연결하는 3가지 핵심 질문</h2></div>
+        <div class="card-body">
+          <p class="intro">관찰, 해석, 발견을 통해 깨달은 바를 나의 실제 삶으로 가져오는 적용 단계입니다. 묵상은 머리로 이해하는 것에서 끝나지 않고 <b>지식, 믿음, 행동</b>으로 구체화되어야 합니다.</p>
+
+          <div class="guide-box">
+            <h3>💡 지식</h3>
+            <p><b>말씀 묵상을 통해 새롭게 알게 된 사실은 무엇인가?</b></p>
+          </div>
+
+          <div class="guide-box">
+            <h3>❤️ 믿음</h3>
+            <p><b>깨달은 지식을 통해 내가 마음에 확신하고 믿게 된 것은 무엇인가?</b></p>
+          </div>
+
+          <div class="guide-box">
+            <h3>🏃 행동</h3>
+            <p><b>이 믿음을 바탕으로 오늘 내 삶에서 구체적으로 실천할 내용은 무엇인가?</b></p>
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="switchStep(2)">Step 2 실습하러 가기</button>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <span>보배마을 중등부 제자훈련 묵상반 - 하나님 중심 말씀 묵상</span>
+        <img src="https://emojipack.netlify.app/emoji/logo_church_blue.png" alt="안락교회">
+      </footer>
+    </main>
+  </div>
+
+
+  <!-- ======================== [VIEW 2: 2단계 묵상 실습 & 토론] ======================== -->
+  <div class="view-panel" id="view-step2">
+    <header class="hero" id="tag2">
+      <div class="hero-inner">
+        <div class="hero-top">
+          <span class="step-badge">2단계: 묵상 실습 & 나눔</span>
+          <img class="hero-emblem" src="https://emojipack.netlify.app/emoji/logo_youth1.png" alt="보배마을 중등부">
+        </div>
+        <p class="eyebrow">제자훈련 묵상반 · 실습 적용</p>
+        <h1>창세기 1장 1~5절</h1>
+        <p class="subtitle">혼돈 속에서 질서와 빛을 창조하신 하나님</p>
+        <div class="tag-row" aria-label="실습 대표 태그">
+          <span class="tag">#창조주하나님</span>
+          <span class="tag">#질서와생명의하나님</span>
+          <span class="tag">#말씀의능력</span>
+        </div>
+        <div class="profile-note"><span class="profile-mark" aria-hidden="true">📖</span><p><b>성경의 주인공은 하나님입니다.</b><br>오늘 말씀 속에서 하나님이 어떤 분이신지 발견하고, 그 사랑을 우리의 삶과 관계 속에서 살아내 봅시다.</p></div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- 2단계 최상단: 오늘의 말씀 본문 -->
+      <article class="card" id="word2">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji26_focused.png" alt=""><h2><span class="num">1</span> 오늘의 말씀 (창세기 1장 1~5절)</h2></div>
+        <div class="card-body">
+          <details class="scripture" open>
+            <summary>천지 창조와 첫째 날<span class="range">창세기 1장 1~5절</span></summary>
+            <div class="verses">
+              <p class="verse"><span class="vnum">1</span>태초에 하나님이 천지를 창조하시니라</p>
+              <p class="verse"><span class="vnum">2</span>땅이 혼돈하고 공허하며 흑암이 깊음 위에 있고 하나님의 영은 수면 위에 운행하시니라</p>
+              <p class="verse"><span class="vnum">3</span>하나님이 이르시되 빛이 있으라 하시니 빛이 있었고</p>
+              <p class="verse"><span class="vnum">4</span>빛이 하나님이 보시기에 좋았더라 하나님이 빛과 어둠을 나누사</p>
+              <p class="verse"><span class="vnum">5</span>하나님이 빛을 낮이라 부르시고 어둠을 밤이라 부르시니라 저녁이 되고 아침이 되니 이는 첫째 날이니라</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- 2단계: 스스로 묵상하기 실습 -->
+      <article class="card" id="self-reading">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji32_prayerful.png" alt=""><h2><span class="num">2</span> 스스로 묵상하기</h2></div>
+        <div class="card-body">
+          <div class="notice">
+            <h3>하나님 중심 읽기 3대 핵심 질문</h3>
+            <p>내 감정이나 행위를 먼저 생각하기 전에, 본문 속에서 일하시는 하나님을 주어로 삼아 관찰하고 해석해 봅시다.</p>
+          </div>
+          
+          <section class="reflection">
+            <h3>Q1. 관찰 · 하나님이 뭘 하시거나 말씀하셨지?</h3>
+            <p class="q-guide">본문에서 하나님이 주어가 되는 문장을 찾아 행동과 말씀을 객관적으로 적어 보세요.</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                <ul>
+                  <li>하나님이 하늘과 땅을 창조하셨다.</li>
+                  <li>땅이 어지럽고 아무것도 없을 때, 하나님의 영이 물 위에 계셨다.</li>
+                  <li>하나님이 "빛이 있으라!" 하고 말씀하시니까 진짜 빛이 생겼다.</li>
+                  <li>하나님이 빛과 어둠을 나누시고, 빛을 '낮', 어둠을 '밤'이라고 부르셨다.</li>
+                </ul>
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_obs" placeholder="하나님의 구체적인 행동이나 말씀을 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+
+          <section class="reflection">
+            <h3>Q2. 해석 · 하나님은 왜 그렇게 하시거나 말씀하셨을까?</h3>
+            <p class="q-guide">하나님의 행동과 말씀에 담긴 의도, 목적, 구원 계획의 이유를 추론해 보세요.</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                <ul>
+                  <li>아무것도 없는 혼돈 속에서 질서와 생명을 만드시려고 하셨다.</li>
+                  <li>우리가 살아갈 세상을 아주 멋지고 좋은 곳으로 만드시려고 하셨다.</li>
+                </ul>
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_int" placeholder="하나님이 왜 그렇게 일하셨는지 그 목적과 마음을 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+
+          <section class="reflection">
+            <h3>Q3. 발견 · 이 말씀을 통해 본 하나님은 어떤 분이신가?</h3>
+            <p class="q-guide">앞의 관찰과 해석을 종합하여, 내가 발견한 하나님의 성품이나 속성을 명확한 한 문장으로 고백해 보세요.</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                <ul>
+                  <li>모든 것을 만드신 분, 즉 창조주 하나님이시다.</li>
+                  <li>말씀하시면 그대로 되는 놀라운 능력과 권능을 가지신 분이다.</li>
+                  <li>질서정연하게 만드시는 지혜로우신 분이다.</li>
+                  <li>만드신 것을 '좋다'라고 하시는 분, 우리를 위한 사랑과 선함을 가지신 분이다.</li>
+                </ul>
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_disc" placeholder="하나님은 ~하시는 분이시다 형태로 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <!-- 2단계: 묵상을 삶으로 연결하기 실습 -->
+      <article class="card" id="self-apply">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji27_welcoming.png" alt=""><h2><span class="num">3</span> 묵상을 삶으로 연결하기</h2></div>
+        <div class="card-body">
+          <p class="intro">하나님을 발견했다면, 이제 지식과 믿음과 구체적인 행동으로 내 삶에 연결해 봅시다.</p>
+
+          <section class="reflection">
+            <h3>Q1. 지식 · 새롭게 알게 된 사실</h3>
+            <p class="q-guide">말씀 묵상을 통해 새롭게 알게 된 성경적 사실은 무엇인가요?</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                혼돈하고 공허한 상태에서 하나님이 말씀으로 빛을 창조하시고 질서를 세우셨다는 사실을 알게 되었다.
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_know" placeholder="새롭게 알게 된 사실을 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+
+          <section class="reflection">
+            <h3>Q2. 믿음 · 마음에 확신하고 믿게 된 것</h3>
+            <p class="q-guide">깨달은 지식을 통해 내 마음에 신뢰하고 고백하게 된 믿음은 무엇인가요?</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                내 삶이나 환경이 혼란스럽고 막막해 보일지라도, 전능하신 하나님께서 개입하시면 언제든 새로운 질서와 길을 열어 주실 수 있는 분임을 믿는다.
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_faith" placeholder="마음으로 굳게 믿게 된 내용을 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+
+          <section class="reflection">
+            <h3>Q3. 행동 · 오늘 내 삶에서 실천할 것</h3>
+            <p class="q-guide">이 믿음을 바탕으로 오늘 하루 내가 살아낼 구체적인 작은 실천을 적어 보세요.</p>
+            <details class="example-box">
+              <summary>작성 예시</summary>
+              <div class="example-content">
+                밤늦게 자고 늦게 일어나는 무질서한 생활 습관을 바로잡기 위해 밤 11시 30분에는 취침하고, 아침에 일어나면 가장 먼저 오늘 하루에 질서를 주시기를 구하는 짧은 기도를 드리겠다.
+              </div>
+            </details>
+            <textarea data-key="guide_gen1_act" placeholder="오늘 실천할 작은 행동을 적어 보세요."></textarea>
+            <p class="save-status" aria-live="polite">입력하면 이 기기에 자동 저장됩니다.</p>
+          </section>
+        </div>
+      </article>
+
+      <!-- 2단계: 질문과 나눔 (토론) -->
+      <article class="card" id="discussion">
+        <div class="card-head"><img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt=""><h2><span class="num">4</span> 질문과 나눔</h2></div>
+        <div class="card-body">
+          <p class="intro">실습을 마치고 조원들과 함께 생각을 나누어 봅시다.</p>
+
+          <div class="discussion-card">
+            <span class="discussion-badge">질문 1</span>
+            <h3>'내가 뭘 해야 하지?'보다 '하나님은 어떤 분일까?'를 먼저 생각하며 성경을 읽어보니 예전과 무엇이 달랐는가?</h3>
+          </div>
+
+          <div class="discussion-card">
+            <span class="discussion-badge">질문 2</span>
+            <h3>하나님이 '무엇을 하셨는지' 찾고, '왜 그렇게 하셨는지' 이유를 생각해 보는 과정에서 어떤 점을 느꼈는가?</h3>
+          </div>
+
+          <div class="discussion-card">
+            <span class="discussion-badge">질문 3</span>
+            <h3>깨달은 점을 '지식, 믿음, 행동' 3가지로 적어보는 것은 내 삶에 어떻게 도움이 되는가?</h3>
+          </div>
+
+          <div class="discussion-card">
+            <span class="discussion-badge">질문 4</span>
+            <h3>묵상이 단순한 '숙제(할 일)'가 되지 않으려면 행동하기 전에 왜 올바른 '지식'과 '믿음'이 필요할까?</h3>
+          </div>
+
+          <button type="button" class="btn btn-outline" onclick="switchStep(1)">Step 1 가이드로 돌아가기</button>
+        </div>
+      </article>
+
+      <footer class="footer">
+        <span>보배마을 중등부 제자훈련 묵상반 - 하나님 중심 말씀 묵상</span>
+        <img src="https://emojipack.netlify.app/emoji/logo_church_blue.png" alt="안락교회">
+      </footer>
+    </main>
+  </div>
+
+  <!-- 2단계 전용 1단계 복귀 플로팅 버튼 -->
+  <button class="fab-step1" id="fab-step1" type="button" onclick="switchStep(1)" aria-label="1단계로 이동">1단계<br>가이드</button>
+  
+  <!-- 맨 위로 가기 버튼 -->
+  <button class="fab" id="fab-top" type="button" aria-label="맨 위로 이동">↑</button>
+
+  <script>
+    // 1단계 ↔ 2단계 전환 함수
+    function switchStep(step) {
+      const v1 = document.getElementById('view-step1');
+      const v2 = document.getElementById('view-step2');
+      const toc1 = document.getElementById('toc-step1');
+      const toc2 = document.getElementById('toc-step2');
+      const fabStep1 = document.getElementById('fab-step1');
+
+      if (step === 1) {
+        v1.classList.add('active');
+        v2.classList.remove('active');
+        toc1.style.display = 'block';
+        toc2.style.display = 'none';
+        fabStep1.style.display = 'none';
+      } else {
+        v1.classList.remove('active');
+        v2.classList.add('active');
+        toc1.style.display = 'none';
+        toc2.style.display = 'block';
+        fabStep1.style.display = 'flex';
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    (() => {
+      // Top button
+      const fabTop = document.getElementById('fab-top');
+      fabTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+      window.addEventListener('scroll', () => fabTop.classList.toggle('show', scrollY > 350), {passive: true});
+
+      // Intersection Observer for active TOC links
+      const sections = [...document.querySelectorAll('article[id]')];
+      const navLinks = [...document.querySelectorAll('.toc-a')];
+      
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        const targetId = visible.target.id;
+        navLinks.forEach(link => link.classList.toggle('on', link.hash === '#' + targetId));
+      }, {rootMargin: '-70px 0px -50% 0px', threshold: [0, .2, .5]});
+      
+      sections.forEach(section => observer.observe(section));
+
+      // LocalStorage Auto-save & Restore
+      const fields = [...document.querySelectorAll('textarea[data-key]')];
+      
+      // Load saved values
+      fields.forEach(field => {
+        try {
+          const saved = localStorage.getItem(field.dataset.key);
+          if (saved) {
+            field.value = saved;
+            if (field.nextElementSibling) {
+              field.nextElementSibling.textContent = '이 기기에 저장된 내용을 불러왔습니다.';
+            }
+          }
+        } catch (_) {}
+      });
+
+      // Realtime Auto-save with debounce
+      fields.forEach(field => {
+        let timer;
+        field.addEventListener('input', () => {
+          const val = field.value;
+          const status = field.nextElementSibling;
+          if (status) status.textContent = '저장 중…';
+
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            try {
+              localStorage.setItem(field.dataset.key, val);
+              if (status) status.textContent = '이 기기에 자동 저장되었습니다.';
+            } catch (_) {
+              if (status) status.textContent = '이 브라우저에서는 자동 저장을 사용할 수 없습니다.';
+            }
+          }, 200);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

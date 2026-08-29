@@ -61,10 +61,20 @@
     .item-card.featured{background:linear-gradient(145deg,#fafff7,#f2f9eb);border:1.5px solid #aed394}
     .item-card.featured .item-title{color:var(--g900)}
 
+    /* Weekly Reading Sections */
+    .week-section[hidden]{display:none}
+    .current-week-list{grid-template-columns:1fr;margin-bottom:20px}
+    .item-card.current-week{min-height:118px;padding:19px 20px;background:linear-gradient(145deg,#fffdf4,#f5f9e7);border:2px solid var(--gold);box-shadow:0 9px 24px rgba(143,101,0,.16)}
+    .item-card.current-week .item-badge{background:#fff0c8;color:#805700}
+    .item-card.current-week .item-title{font-size:18px;color:var(--g900)}
+    .item-card.current-week .item-desc{font-size:13px}
+    .js .material-source{display:none}
+
     /* Footer */
     .footer{text-align:center;padding:24px 16px;color:var(--muted);font-size:12px;line-height:1.6;border-top:1px solid #ddecce;margin-top:auto}
     .footer img{height:28px;margin:8px auto 0}
   </style>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -107,15 +117,38 @@
       </a>
     </div>
 
-    <!-- 2. 성경 본문 묵상 교재 목록 섹션 (확장형 그리드) -->
-    <h2 class="section-title">
-      <img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt="">
-      <span>성경 본문별 묵상 교재</span>
-    </h2>
-    <div class="list-grid">
+    <!-- 2. 이번 주 말씀 -->
+    <section class="week-section" id="current-week-section">
+      <h2 class="section-title">
+        <img src="https://emojipack.netlify.app/emoji/emoji32_prayerful.png" alt="">
+        <span>이번 주 말씀</span>
+      </h2>
+      <div class="list-grid current-week-list" id="current-week-list"></div>
+    </section>
+
+    <!-- 3. 다음 주 말씀 -->
+    <section class="week-section" id="future-week-section">
+      <h2 class="section-title">
+        <img src="https://emojipack.netlify.app/emoji/emoji10_fellowship.png" alt="">
+        <span>다음 주 말씀</span>
+      </h2>
+      <div class="list-grid" id="future-week-list"></div>
+    </section>
+
+    <!-- 4. 지난주 말씀 -->
+    <section class="week-section" id="past-week-section">
+      <h2 class="section-title">
+        <img src="https://emojipack.netlify.app/emoji/emoji26_focused.png" alt="">
+        <span>지난주 말씀</span>
+      </h2>
+      <div class="list-grid" id="past-week-list"></div>
+    </section>
+
+    <!-- 본문 교재 원본 목록: JavaScript가 현재 날짜에 맞춰 위 영역으로 자동 이동합니다 -->
+    <div class="list-grid material-source" id="material-source">
 
       <!-- 로마서 11장 -->
-      <a href="260823_rom11.html" class="item-card">
+      <a href="260823_rom11.html" class="item-card" data-week="2026-08-23">
         <div>
           <div class="item-top">
             <span class="item-badge">8월 23일</span>
@@ -127,7 +160,7 @@
       </a>
       
       <!-- 고린도전서 2장 -->
-      <a href="260830_1Cor2.html" class="item-card">
+      <a href="260830_1Cor2.html" class="item-card" data-week="2026-08-30">
         <div>
           <div class="item-top">
             <span class="item-badge">8월 30일</span>
@@ -139,7 +172,7 @@
       </a>
 
       <!-- 고린도전서 9장 -->
-      <a href="260906_1Cor9.html" class="item-card">
+      <a href="260906_1Cor9.html" class="item-card" data-week="2026-09-06">
         <div>
           <div class="item-top">
             <span class="item-badge">9월 6일</span>
@@ -151,7 +184,7 @@
       </a>
 
       <!-- 고린도전서 16장 -->
-      <a href="260913_1Cor16.html" class="item-card">
+      <a href="260913_1Cor16.html" class="item-card" data-week="2026-09-13">
         <div>
           <div class="item-top">
             <span class="item-badge">9월 13일</span>
@@ -163,7 +196,7 @@
       </a>
 
       <!-- 고린도후서 7장 -->
-      <a href="260920_2Cor7.html" class="item-card">
+      <a href="260920_2Cor7.html" class="item-card" data-week="2026-09-20">
         <div>
           <div class="item-top">
             <span class="item-badge">9월 20일</span>
@@ -197,6 +230,49 @@
     <span>보배마을 중등부 1131 말씀읽기 - 하나님 중심 말씀 묵상</span>
     <img src="https://emojipack.netlify.app/emoji/logo_church_blue.png" alt="안락교회">
   </footer>
+
+  <script>
+    (() => {
+      const parseWeek = (value) => {
+        const [year, month, day] = value.split('-').map(Number);
+        return new Date(year, month - 1, day);
+      };
+      const formatDate = (date) => `${date.getMonth() + 1}월 ${date.getDate()}일`;
+      const today = new Date();
+      const weekStart = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay());
+
+      const lists = {
+        current: document.querySelector('#current-week-list'),
+        future: document.querySelector('#future-week-list'),
+        past: document.querySelector('#past-week-list')
+      };
+      const sections = {
+        current: document.querySelector('#current-week-section'),
+        future: document.querySelector('#future-week-section'),
+        past: document.querySelector('#past-week-section')
+      };
+      const counts = {current: 0, future: 0, past: 0};
+
+      document.querySelectorAll('#material-source [data-week]').forEach((card) => {
+        const cardWeek = parseWeek(card.dataset.week);
+        let group = 'past';
+        if (cardWeek.getTime() === weekStart.getTime()) group = 'current';
+        else if (cardWeek > weekStart) group = 'future';
+
+        if (group === 'current') {
+          card.classList.add('current-week');
+          const badge = card.querySelector('.item-badge');
+          badge.textContent = `이번 주 · ${formatDate(cardWeek)}`;
+        }
+        lists[group].appendChild(card);
+        counts[group] += 1;
+      });
+
+      Object.keys(sections).forEach((group) => {
+        sections[group].hidden = counts[group] === 0;
+      });
+    })();
+  </script>
 
 </body>
 </html>

@@ -552,6 +552,7 @@
       const shareBtn = document.getElementById('share-btn');
       const shareNotice = document.getElementById('share-notice');
       shareBtn.addEventListener('click', async () => {
+        const previewWindow = /KAKAOTALK/i.test(navigator.userAgent) ? window.open('', '_blank') : null;
         shareBtn.disabled = true;
         shareBtn.innerText = '캡쳐 생성 중…';
         shareNotice.style.display = 'none';
@@ -584,13 +585,15 @@
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               try {
                 await navigator.share({ files: [file], title: '고린도전서 9장 내 마음 돌아보기', text: '보배마을 중등부 1131 말씀읽기 - 나의 나눔' });
+                if (previewWindow && !previewWindow.closed) previewWindow.close();
                 shareNotice.textContent = '공유창이 열렸습니다. 카카오톡을 선택해 주세요.';
                 shareNotice.style.display = 'block';
               } catch (err) {
-                if (err.name !== 'AbortError') downloadFallback(blob);
+                if (err.name !== 'AbortError') downloadFallback(blob, previewWindow);
+                else if (previewWindow && !previewWindow.closed) previewWindow.close();
               }
             } else {
-              downloadFallback(blob);
+              downloadFallback(blob, previewWindow);
             }
             resetShareBtn();
           }, 'image/png');
@@ -600,14 +603,22 @@
         }
       });
 
-      function downloadFallback(blob) {
+      function downloadFallback(blob, previewWindow) {
         const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = '내_마음_돌아보기_고린도전서9장.png';
-        a.click();
-        URL.revokeObjectURL(url);
-        shareNotice.textContent = '이미지가 다운로드되었습니다. 카카오톡으로 전달해 보세요!';
+        if (previewWindow && !previewWindow.closed) {
+          previewWindow.location.href = url;
+          shareNotice.textContent = '새 화면에 이미지가 열렸습니다. 이미지를 길게 눌러 사진으로 저장해 주세요.';
+        } else {
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = '내_마음_돌아보기_고린도전서9장.png';
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          shareNotice.textContent = '이미지 다운로드를 요청했습니다. 저장이 보이지 않으면 브라우저 메뉴에서 외부 브라우저로 열어 주세요.';
+        }
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
         shareNotice.style.display = 'block';
       }
 

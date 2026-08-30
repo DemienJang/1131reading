@@ -539,7 +539,6 @@
       const shareBtn = document.getElementById('share-btn');
       const shareNotice = document.getElementById('share-notice');
       shareBtn.addEventListener('click', async () => {
-        const previewWindow = /KAKAOTALK/i.test(navigator.userAgent) ? window.open('', '_blank') : null;
         shareBtn.disabled = true;
         shareBtn.innerText = '캡쳐 생성 중…';
         shareNotice.style.display = 'none';
@@ -571,15 +570,13 @@
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
               try {
                 await navigator.share({ files: [file], title: '고린도전서 2장 내 마음 돌아보기', text: '보배마을 중등부 1131 말씀읽기 - 나의 나눔' });
-                if (previewWindow && !previewWindow.closed) previewWindow.close();
                 shareNotice.textContent = '공유창이 열렸습니다. 카카오톡을 선택해 주세요.';
                 shareNotice.style.display = 'block';
               } catch (err) {
-                if (err.name !== 'AbortError') downloadFallback(blob, previewWindow);
-                else if (previewWindow && !previewWindow.closed) previewWindow.close();
+                if (err.name !== 'AbortError') downloadFallback(blob);
               }
             } else {
-              downloadFallback(blob, previewWindow);
+              downloadFallback(blob);
             }
             resetShareBtn();
           }, 'image/png');
@@ -589,11 +586,11 @@
         }
       });
 
-      function downloadFallback(blob, previewWindow) {
+      function downloadFallback(blob) {
         const url = URL.createObjectURL(blob);
-        if (previewWindow && !previewWindow.closed) {
-          previewWindow.location.href = url;
-          shareNotice.textContent = '새 화면에 이미지가 열렸습니다. 이미지를 길게 눌러 사진으로 저장해 주세요.';
+        if (/KAKAOTALK/i.test(navigator.userAgent)) {
+          showImagePreview(url);
+          shareNotice.textContent = '아래 이미지가 열렸습니다. 이미지를 길게 눌러 사진으로 저장해 주세요.';
         } else {
           const a = document.createElement('a');
           a.href = url;
@@ -603,9 +600,30 @@
           a.click();
           a.remove();
           shareNotice.textContent = '이미지 다운로드를 요청했습니다. 저장이 보이지 않으면 브라우저 메뉴에서 외부 브라우저로 열어 주세요.';
+          setTimeout(() => URL.revokeObjectURL(url), 60000);
         }
-        setTimeout(() => URL.revokeObjectURL(url), 60000);
         shareNotice.style.display = 'block';
+      }
+
+      function showImagePreview(url) {
+        document.getElementById('capture-image-preview')?.remove();
+        const preview = document.createElement('div');
+        preview.id = 'capture-image-preview';
+        preview.style.cssText = 'position:fixed;inset:0;z-index:9999;overflow:auto;padding:20px 14px;background:rgba(11,29,5,.94);text-align:center;';
+        const message = document.createElement('p');
+        message.textContent = '이미지를 길게 눌러 사진으로 저장해 주세요.';
+        message.style.cssText = 'margin:0 44px 14px;color:#fff;font-weight:700;font-size:14px;';
+        const close = document.createElement('button');
+        close.type = 'button';
+        close.textContent = '닫기';
+        close.style.cssText = 'position:fixed;top:12px;right:12px;padding:7px 11px;border:0;border-radius:8px;background:#fff;color:#1a3a0b;font-weight:800;';
+        const image = document.createElement('img');
+        image.src = url;
+        image.alt = '나의 묵상 캡처 이미지';
+        image.style.cssText = 'display:block;width:100%;max-width:620px;margin:0 auto 20px;background:#fff;';
+        close.addEventListener('click', () => { preview.remove(); URL.revokeObjectURL(url); });
+        preview.append(message, close, image);
+        document.body.appendChild(preview);
       }
 
       function resetShareBtn() {
